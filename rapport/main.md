@@ -18,7 +18,7 @@ nocite: |
     @*
 output:
   pdf_document:
-    template: "/home/pablo/Documents/Scolaire/Fac/MPRI/hott/article/rapport/template.latex"
+    template: "template.latex"
 export_on_save:
   pandoc: true
 ---
