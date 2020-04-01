@@ -1,0 +1,67 @@
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{mathpartir,proof}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{prftree}
+\usepackage{cmll}
+\usepackage{xcolor}
+\usepackage{relsize}
+
+\setbeamertemplate{blocks}[default]
+
+\newcolumntype{O}[1]{>{\setlength\hsize{#1\hsize}}c}
+\newcolumntype{M}[1]{>{\small}m{#1\hsize}}
+
+\definecolor{term}{HTML}{DC5000}
+\definecolor{context}{HTML}{008214}
+
+\definecolor{pos}{HTML}{C80000}
+\definecolor{neg}{HTML}{0000C8}
+
+\newcommand{\lto}{\Rightarrow}
+\newcommand{\seq}{\vdash}
+\newcommand{\irule}[1]{\smaller$#1$}
+\newcommand{\iruleL}[1]{\irule{{#1}{L}}}
+\newcommand{\iruleR}[1]{\irule{{#1}{R}}}
+\newcommand{\cutbar}{\mathbin{\|}}
+\newcommand{\indep}{\mathbin{\perp \!\!\! \perp}}
+
+\newcommand{\lmmtc}{$\bar{\lambda}\mu\tilde{\mu}$-calcul}
+\newcommand{\lmc}{$\lambda\mu$-calcul}
+\newcommand{\sysL}{système $\mathsf{L}$}
+\newcommand{\SysL}{Système $\mathsf{L}$}
+\newcommand{\sysLfoc}{système $\mathsf{L_{foc}}$}
+\newcommand{\SysLfoc}{Système $\mathsf{L_{foc}}$}
+\newcommand{\sysLK}{système $\mathsf{LK}$}
+\newcommand{\SysLK}{Système $\mathsf{LK}$}
+
+\newcommand{\CTneg}[1]{\left[#1\right]}
+\newcommand{\CTimpl}[2]{\lambda #1.#2}
+\newcommand{\CTplusone}[1]{\iota_1(#1)}
+\newcommand{\CTplustwo}[1]{\iota_2(#1)}
+\newcommand{\CTwith}[4]{\mu\left(\pi_1 \cdot #1.#2 \mid \pi_2 \cdot #3.#4\right)}
+
+\newcommand{\CEneg}[2]{\tilde{\mu}[#1].#2}
+\newcommand{\CEimpl}[2]{#1 \cdot #2}
+\newcommand{\CEwithone}[1]{\pi_1 \cdot #1}
+\newcommand{\CEwithtwo}[1]{\pi_2 \cdot #1}
+\newcommand{\CEplus}[4]{\tilde{\mu}\left(\iota_1(#1).#2 \mid \iota_2(#3).#4\right)}
+
+\newcommand{\Ctensor}[2]{\left(#1,#2\right)}
+\newcommand{\Cparr}[3]{μ\left(#1,#2\right).#3}
+\newcommand{\Cwith}[4]{\mu\left(\iota_1(#1).#2 \mid \iota_2(#3).#4\right)}
+
+\newcommand{\substT}[3]{#1{\color{term}\left[#2 \mathbin{/} #3\right]}}
+\newcommand{\substE}[3]{#1{\color{context}\left[#2 \mathbin{/} #3\right]}}
+\newcommand{\red}[1]{\rightarrow_{#1}}
+
+\newcommand{\term}[1]{{\color{term} #1}}
+\newcommand{\context}[1]{{\color{context} #1}}
+\newcommand{\cut}[2]{\left\langle \term{#1} \cutbar \context{#2} \right\rangle}
+
+\newcommand{\ppos}[1]{{\color{pos} #1}}
+\newcommand{\pneg}[1]{{\color{neg} #1}}
+\newcommand{\pcut}[2]{\left\langle \ppos{#1} \cutbar \pneg{#2} \right\rangle}
