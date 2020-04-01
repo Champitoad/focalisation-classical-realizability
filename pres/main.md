@@ -1,7 +1,7 @@
 ---
 lang: fr-FR
 title: "Focalisation and Classical Realisability"
-subtitle: "Munch-Maccagnoni"
+subtitle: "Guillaume Munch-Maccagnoni"
 author: Pablo Donato
 date: \today
 institute: "Université de Paris"
